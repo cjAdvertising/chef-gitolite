@@ -44,6 +44,14 @@ end
 
 package "gitolite"
 
+# Install gl-admin-push alias
+template "/usr/local/bin/gl-admin-push" do
+  source "gl-admin-push.erb"
+  owner "root"
+  group "root"
+  mode "0775"
+end
+
 # Set up sudoers
 node["gitolite"]["sudoers"].each do |u|
   

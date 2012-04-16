@@ -1,0 +1,9 @@
+#!/bin/sh
+# wrapper script for gl-admin-push
+# Copyright (C) 2012 cj Advertising, LLC. <gthornton@cjadvertising.com>
+# Licenced under WTFPLv2
+
+PATH=/usr/share/gitolite:$PATH
+export PATH
+
+exec /usr/share/gitolite/gl-admin-push "$@"
